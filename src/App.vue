@@ -1,9 +1,14 @@
 <template>
   <mynavbar @newnavbarheight="newnavbarheight" />
 
+  <div id="nav">
+    <router-link to="/">Table</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+
   <div ref="contentref" class="content">
+    <!--
     <button @click="mypopup" style="margin-top: 1em">Open Popup...</button>
-    <!-- embed  type="text/plain" src="./assets/text.txt" /      geht nicht -->
     <p>Filter val in App.vue: {{ myFilVal }}</p>
     <Table
       :myfields="myfields"
@@ -18,6 +23,7 @@
         <myInput @setfilterto="setfilter" />
       </div>
     </div>
+    -->
   </div>
 </template>
 
@@ -25,6 +31,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import mynavbar from "./components/navbar.vue";
 import Table from "./components/table.vue";
+import About from "./views/about.vue";
 import myInput from "./components/input.vue";
 import mydata from "./assets/data.json";
 import "./App.css";
@@ -38,7 +45,7 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    component: () => import("./views/about.vue"),
+    component: About,
   },
 ];
 const router = createRouter({
@@ -50,6 +57,7 @@ export default {
   name: "App",
   components: {
     Table,
+    About,
     myInput,
     mynavbar,
   },
