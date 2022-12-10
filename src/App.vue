@@ -1,11 +1,10 @@
 <template>
   <mynavbar @newnavbarheight="newnavbarheight" />
-
-  <div id="nav">
+  <div id="nav" style="margin-top: 120px">
     <router-link to="/">Table</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-
+  <router-view />
   <div ref="contentref" class="content">
     <!--
     <button @click="mypopup" style="margin-top: 1em">Open Popup...</button>
