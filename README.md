@@ -1,4 +1,4 @@
-# vue 3 navbar
+# vue 3 navbar with router
 
 # this t up there is important, if deleted, commit from codesandbox not possible ("Error: t undefined")
 
