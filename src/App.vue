@@ -22,11 +22,29 @@
 </template>
 
 <script>
+import { createRouter, createWebHistory } from "vue-router";
 import mynavbar from "./components/navbar.vue";
 import Table from "./components/table.vue";
 import myInput from "./components/input.vue";
 import mydata from "./assets/data.json";
 import "./App.css";
+
+const routes = [
+  {
+    path: "/",
+    name: "Table",
+    component: Table,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("./views/about.vue"),
+  },
+];
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
 
 export default {
   name: "App",
@@ -36,8 +54,6 @@ export default {
     mynavbar,
   },
   methods: {
-
-
     // called by emit from navbar, if navbar height changes due to resizing, set margin-top of content to new offset acc. to navbar height
     newnavbarheight(newnavbarheight_) {
       // console.log("changed: " + this.$refs.contentref.clientWidth  ); // works. all props see https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight or better(?) https://www.w3schools.com/jsref/dom_obj_style.asp
@@ -53,6 +69,7 @@ export default {
       this.mypopup();
     },
     mypopup() {
+      console.log(router);
       //this.$refs.myModal.style="display:block";
       if (this.$refs.myModal.style.display === "block")
         this.$refs.myModal.style = "display:none";
