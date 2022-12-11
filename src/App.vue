@@ -1,6 +1,6 @@
 <template>
   <div id="nav" style="margin-top: 120px">
-    <router-link to="/">Table</router-link> |
+    <router-link to="/">Page</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
