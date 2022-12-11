@@ -27,37 +27,17 @@
 </template>
 
 <script>
-import { createRouter, createWebHistory } from "vue-router";
 import mynavbar from "./components/navbar.vue";
-import Table from "./components/table.vue";
-import About from "./views/about.vue";
-import myInput from "./components/input.vue";
+//import myInput from "./components/input.vue";
 import mydata from "./assets/data.json";
 import "./App.css";
-
-const routes = [
-  {
-    path: "/",
-    name: "Table",
-    component: Table,
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About,
-  },
-];
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
-});
 
 export default {
   name: "App",
   components: {
-    Table,
+    /* Table,
     About,
-    myInput,
+    myInput, */
     mynavbar,
   },
   methods: {
@@ -76,7 +56,7 @@ export default {
       this.mypopup();
     },
     mypopup() {
-      console.log(router);
+      //console.log(router);
       //this.$refs.myModal.style="display:block";
       if (this.$refs.myModal.style.display === "block")
         this.$refs.myModal.style = "display:none";
