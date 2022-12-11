@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Table from "../components/table.vue";
-import About from "../views/about.vue";
+//import Table from "./components/table.vue";
+import About from "./views/about.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Table",
-    component: Table
+    name: "About",
+    component: About
   },
   {
     path: "/about",

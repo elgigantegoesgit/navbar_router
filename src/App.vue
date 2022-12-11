@@ -1,12 +1,12 @@
 <template>
-  <mynavbar @newnavbarheight="newnavbarheight" />
   <div id="nav" style="margin-top: 120px">
     <router-link to="/">Table</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
+  <!--
   <div ref="contentref" class="content">
-    <!--
+  <mynavbar @newnavbarheight="newnavbarheight" />
     <button @click="mypopup" style="margin-top: 1em">Open Popup...</button>
     <p>Filter val in App.vue: {{ myFilVal }}</p>
     <Table
@@ -22,12 +22,12 @@
         <myInput @setfilterto="setfilter" />
       </div>
     </div>
-    -->
   </div>
+    -->
 </template>
 
 <script>
-import mynavbar from "./components/navbar.vue";
+//import mynavbar from "./components/navbar.vue";
 //import myInput from "./components/input.vue";
 import mydata from "./assets/data.json";
 import "./App.css";
@@ -37,18 +37,18 @@ export default {
   components: {
     /* Table,
     About,
-    myInput, */
-    mynavbar,
+    myInput, 
+    mynavbar,*/
   },
   methods: {
     // called by emit from navbar, if navbar height changes due to resizing, set margin-top of content to new offset acc. to navbar height
-    newnavbarheight(newnavbarheight_) {
+    /* newnavbarheight(newnavbarheight_) {
       // console.log("changed: " + this.$refs.contentref.clientWidth  ); // works. all props see https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight or better(?) https://www.w3schools.com/jsref/dom_obj_style.asp
       this.$refs.contentref.style.marginTop = newnavbarheight_ + "px";
       console.log(
         "changed content marginTop to: " + this.$refs.contentref.style.marginTop
       );
-    },
+    },*/
 
     setfilter(fil_) {
       console.log("filterxxx" + fil_);
