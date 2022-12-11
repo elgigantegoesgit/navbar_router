@@ -5,24 +5,21 @@
     </div>
 
     <div class="nav_button_container">
-      <div class="btn" @click="$emit('show1')">Table</div>
-      <div class="btn" @click="$emit('show2')">Flex</div>
-      <div class="btn" @click="$emit('showlist')">Sort</div>
+      <router-link to="/" class="btn">Home</router-link>
+      <router-link to="/table" class="btn">Table</router-link>
+      <router-link to="/about" class="btn">About</router-link>
 
-      <div class="btn" @click="$emit('show1')">xxxxx</div>
-      <div class="btn" @click="$emit('show2')">yyyyyyyy</div>
-      <div class="btn" @click="mymeth('ZZZ')">zz</div>
-
-      <div class="btn" @click="$emit('show1')">111</div>
-      <div class="btn" @click="$emit('show2')">2222</div>
-      <div class="btn" @click="$emit('showlist')">3333</div>
+      <div class="btn" @click="$emit('mypopup')">Modal popup</div>
+      <div class="btn" @click="mymeth('MY_METH')">myMethod</div>
+      <div class="btn" @click="mymeth('22222')">2222</div>
+      <div style="display: block; margin-right: 10px">▲▼</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  emits: ["newnavbarheight"],
+  emits: ["newnavbarheight", "mypopup"],
   props: {},
   data() {
     return {
@@ -30,8 +27,8 @@ export default {
     };
   },
   methods: {
-    mymeth() {
-      alert("xxx mymeth() called.");
+    mymeth(val_) {
+      alert("xxx mymeth() called with: " + val_);
     },
   },
   mounted() {

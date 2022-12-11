@@ -20,12 +20,14 @@ body {
 }
 
 .btn {
-  background: black;
+  background: blue;
   padding: 2vh 2vw;
   margin: 1vh 1vw;
   color: lightblue;
+  box-shadow: 0 0 1px 1px blue;
   cursor: pointer;
   border-radius: 5vw;
+  text-decoration: none;
 }
 
 .btn:hover {

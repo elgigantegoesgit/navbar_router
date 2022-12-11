@@ -1,5 +1,7 @@
 <template>
-  <p>Message is: '{{ myVal }}'</p>
+  <div style="background: red; height: 100vh">
+    <p>Message is: '{{ myVal }}'</p>
+  </div>
 </template>
 
 <script>

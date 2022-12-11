@@ -1,6 +1,6 @@
 <template>
-  <div style="background: blue; height: 100vh">
-    <p>Message is: '{{ myVal }}'</p>
+  <div style="background: green; height: 100vh">
+    <p>TABLE message is: '{{ myVal }}'</p>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   props: {},
   data() {
     return {
-      myVal: "xx now news xx",
+      myVal: "TABLE anothe page.......",
     };
   },
   methods: {},

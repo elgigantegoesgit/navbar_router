@@ -1,12 +1,13 @@
 <template>
-  <mynavbar @newnavbarheight="newnavbarheight" />
-  <div id="nav" style="margin-top: 120px">
+  <mynavbar @newnavbarheight="newnavbarheight" @mypopup="mypopup" />
+  <!-- div id="nav" style="margin-top: 120px">
     <router-link to="/">Page</router-link> |
     <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
-  <!--
+  </div -->
   <div ref="contentref" class="content">
+    <router-view />
+  </div>
+  <!--
     <button @click="mypopup" style="margin-top: 1em">Open Popup...</button>
     <p>Filter val in App.vue: {{ myFilVal }}</p>
     <Table
@@ -14,16 +15,15 @@
       :studentData="studentDatax"
       :myFilter="myFilVal"
     ></Table>
+    -->
 
-    <div ref="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close" @click="mypopup">&times;</span>
-        <p>Enter number to filter age for</p>
-        <myInput @setfilterto="setfilter" />
-      </div>
+  <div ref="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" @click="mypopup">&times;</span>
+      <p>Enter number to filter age for</p>
+      <myInput @setfilterto="setfilter" />
     </div>
   </div>
-    -->
 </template>
 
 <script>
