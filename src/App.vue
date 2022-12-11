@@ -4,7 +4,8 @@
     <router-link to="/">Page</router-link> |
     <router-link to="/about">About</router-link>
   </div -->
-  <div ref="contentref" class="content">
+
+  <div ref="contentref" style="margin-top: 150px">
     <router-view />
   </div>
   <!--
@@ -28,7 +29,7 @@
 
 <script>
 import mynavbar from "./components/navbar.vue";
-//import myInput from "./components/input.vue";
+import myInput from "./components/input.vue";
 import mydata from "./assets/data.json";
 import "./App.css";
 
@@ -36,15 +37,15 @@ export default {
   name: "App",
   components: {
     /* Table,
-    About,
-    myInput, */
+    About,*/
+    myInput,
     mynavbar,
   },
   methods: {
     // called by emit from navbar, if navbar height changes due to resizing, set margin-top of content to new offset acc. to navbar height
     newnavbarheight(newnavbarheight_) {
-      // console.log("changed: " + this.$refs.contentref.clientWidth  ); // works. all props see https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight or better(?) https://www.w3schools.com/jsref/dom_obj_style.asp
-      //this.$refs.contentref.style.marginTop = newnavbarheight_ + "px";
+      //console.log("changed: " + this.$refs.contentref.clientWidth); // works. all props see https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight or better(?) https://www.w3schools.com/jsref/dom_obj_style.asp
+      this.$refs.contentref.style.marginTop = newnavbarheight_ + "px";
       //console.log(
       //  "changed content marginTop to: " + this.$refs.contentref.style.marginTop
       //);
@@ -56,12 +57,10 @@ export default {
       this.mypopup();
     },
     mypopup() {
-      //console.log(router);
-      //this.$refs.myModal.style="display:block";
-      if (this.$refs.myModal.style.display === "block")
-        this.$refs.myModal.style = "display:none";
-      else this.$refs.myModal.style = "display:block";
-      //console.log(this.$refs.myModal.style);
+      this.$refs.myModal.style =
+        this.$refs.myModal.style.display === "block"
+          ? (this.$refs.myModal.style = "display:none")
+          : (this.$refs.myModal.style = "display:block");
     },
   },
   mounted() {

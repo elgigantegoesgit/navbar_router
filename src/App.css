@@ -12,12 +12,12 @@ body {
   border-radius: 25px;
 }
 
-.content {
+/*.content {
   background: linear-gradient(45deg, #233329, #63d471);
   background-attachment: fixed;
-  margin-top: 200px;
   height: 100vh;
-}
+  margin-top: 200px;
+}*/
 
 .btn {
   background: blue;
@@ -28,6 +28,7 @@ body {
   cursor: pointer;
   border-radius: 5vw;
   text-decoration: none;
+  user-select: none;
 }
 
 .btn:hover {
@@ -36,7 +37,15 @@ body {
 }
 
 .btn:active {
-  background: blue;
+  /* Problem: when moving mouse out with button pressed, it stays active... */
+  background: royalblue;
+  box-shadow: 0 0 5px 1px blue;
+}
+
+.router-link-active {
+  /* router provides this class by default */
+  font-weight: 900;
+  color: white;
   box-shadow: 0 0 5px 1px blue;
 }
 

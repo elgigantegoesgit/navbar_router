@@ -33,11 +33,10 @@ export default {
   },
   mounted() {
     // Observe navbar height to adapt content y position accordingly
-    /* const resizeObserver = new ResizeObserver(() => {
+    const resizeObserver = new ResizeObserver(() => {
       this.$emit("newnavbarheight", this.$refs.navbarref.clientHeight);
     });
     resizeObserver.observe(this.$refs.navbarref);
-    */
   },
 };
 </script>
