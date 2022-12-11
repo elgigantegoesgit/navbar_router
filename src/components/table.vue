@@ -118,7 +118,7 @@ export default {
 
   mounted() {
     console.log("process.env.NODE_ENV set to: '" + process.env.NODE_ENV + "'");
-    this.studentDatalcl = [...this.studentData];
+    // this.studentDatalcl = [...this.studentData];
     for (var i = 6; i < 1000; i++) {
       // ab 15000 wirds zach (>1 sec)
       this.studentDatalcl.push({
