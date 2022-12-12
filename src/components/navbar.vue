@@ -12,7 +12,21 @@
       <div class="btn" @click="$emit('mypopup')">Modal popup</div>
       <div class="btn" @click="mymeth('MY_METH')">myMethod</div>
       <div class="btn" @click="mymeth('22222')">2222</div>
-      <div style="position: absolute; bottom: 10px; right: 20px">▲▼</div>
+      <div
+        class="btn"
+        @click="navbar_fold"
+        style="
+          position: absolute;
+          bottom: 0px;
+          right: 20px;
+          background: black;
+          border-radius: 1vw;
+          padding: 1vh 1vw;
+          margin: 1vh 1vw;
+        "
+      >
+        ▲▼
+      </div>
     </div>
   </div>
 </template>
@@ -23,10 +37,14 @@ export default {
   props: {},
   data() {
     return {
-      myVal: "xx now news xx",
+      navbarIsFold: 0,
     };
   },
   methods: {
+    navbar_fold() {
+      navbarIsFold = !navbarIsFold;
+    },
+
     mymeth(val_) {
       alert("xxx mymeth() called with: " + val_);
     },
