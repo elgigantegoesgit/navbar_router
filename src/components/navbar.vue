@@ -12,7 +12,7 @@
       <div class="btn" @click="$emit('mypopup')">Modal popup</div>
       <div class="btn" @click="mymeth('MY_METH')">myMethod</div>
       <div class="btn" @click="mymeth('22222')">2222</div>
-      <div style="display: block; margin-right: 10px">▲▼</div>
+      <div style="position: absolute; bottom: 10px; right: 20px">▲▼</div>
     </div>
   </div>
 </template>
