@@ -37,7 +37,7 @@ export default {
   props: {},
   data() {
     return {
-      navbarIsFold: 0,
+      navbarIsFold: false,
     };
   },
   methods: {
@@ -50,11 +50,13 @@ export default {
     },
   },
   mounted() {
+    /* //works
     // Observe navbar height to adapt content y position accordingly
     const resizeObserver = new ResizeObserver(() => {
       this.$emit("newnavbarheight", this.$refs.navbarref.clientHeight);
     });
     resizeObserver.observe(this.$refs.navbarref);
+    */
   },
 };
 </script>

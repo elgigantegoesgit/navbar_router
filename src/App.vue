@@ -19,6 +19,7 @@
     -->
 
   <div ref="myModal" class="modal">
+    <div class="modal-header">Modal Window</div>
     <div class="modal-content">
       <span class="close" @click="mypopup">&times;</span>
       <p>Enter number to filter age for</p>
@@ -45,7 +46,10 @@ export default {
     // called by emit from navbar, if navbar height changes due to resizing, set margin-top of content to new offset acc. to navbar height
     newnavbarheight(newnavbarheight_) {
       //console.log("changed: " + this.$refs.contentref.clientWidth); // works. all props see https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight or better(?) https://www.w3schools.com/jsref/dom_obj_style.asp
-      this.$refs.contentref.style.marginTop = newnavbarheight_ + "px";
+      //
+      //works:
+      // this.$refs.contentref.style.marginTop = newnavbarheight_ + "px";
+      //
       //console.log(
       //  "changed content marginTop to: " + this.$refs.contentref.style.marginTop
       //);
