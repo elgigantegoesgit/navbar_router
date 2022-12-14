@@ -20,8 +20,9 @@
 
   <div ref="myModal" class="modal">
     <div class="modal-content">
-    <div class="modal-header">Modal Window - drag me
-        <span class="close" @click="mypopup">&times;</span>
+      <div class="modal-header-cont">
+        <div class="modal-header">Modal Window - drag me</div>
+        <div class="close" @click="mypopup">&times;</div>
       </div>
       <p>Enter number to filter age for</p>
       <myInput @setfilterto="setfilter" />
