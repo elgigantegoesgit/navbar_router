@@ -66,18 +66,17 @@ body {
 
 /* Modal Header */
 .modal-header {
+  width: 100%;
   background-color: cyan;
-  margin: auto;
-  padding: 5px;
+  text-align: center;
   border: 1px solid #888;
-  width: 80%;
 }
 
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 0px;
   border: 1px solid #888;
   width: 80%;
   box-shadow: 0px 0px 10px 10px cyan;
